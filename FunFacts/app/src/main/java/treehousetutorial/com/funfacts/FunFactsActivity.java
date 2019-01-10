@@ -14,6 +14,7 @@ public class FunFactsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Create our variable and give it the layout we'd like it to display
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fun_facts);
 
@@ -21,9 +22,11 @@ public class FunFactsActivity extends AppCompatActivity {
         factTextView = (TextView) findViewById(R.id.factTextView);
         showFactButton = (Button) findViewById(R.id.showFactButton);
 
+        // Create OnlClickListener for our button
         View.OnClickListener listener = new View.OnClickListener(){
           @Override
           public void onClick(View v) {
+              // use FactBook object to get a random fact
               String fact = factBook.getFact();
 
               // Update our screen with a new fact
@@ -31,6 +34,7 @@ public class FunFactsActivity extends AppCompatActivity {
             }
           };
 
+        // attach OnClickListener to our button
         showFactButton.setOnClickListener(listener);
 
     }

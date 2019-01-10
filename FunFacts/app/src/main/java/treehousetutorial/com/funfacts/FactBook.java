@@ -3,9 +3,9 @@ package treehousetutorial.com.funfacts;
 
 import java.util.Random;
 
-public class FactBook {
+class FactBook {
     // Fields or Member Variables - Properties about the object
-    String[] facts = {
+    private String[] facts = {
             "Ants stretch when they wake up in the morning.",
             "Ostriches can run faster than horses.",
             "Olympic gold medals are actually made mostly of silver.",
@@ -18,7 +18,7 @@ public class FactBook {
             "Mammoths still walked the earth when the Great Pyramid was being built."
     };
     // Methods - Actions the object can take
-    public String getFact() {
+    String getFact() {
 
         // Randomly select a fact
         Random randomGenerator = new Random();
